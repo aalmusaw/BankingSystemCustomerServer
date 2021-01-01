@@ -21,9 +21,8 @@ mongoose.connect(process.env.DB_CONNECTION_URI, DB_CONFIG, err => {
 const app = express();
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
-app.use('/', merchantRouter);
 app.use('/', authenticate, customerRouter);
-
+app.use('/', authenticate, merchantRouter);
 
 const PORT = process.env.PORT || 3002;
 
