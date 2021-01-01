@@ -17,12 +17,12 @@ Content-Type: application/json
 }
 
 ### transfer
-POST http://localhost:3002/customer/aalmusaw@uwo.ca
-Authorization: Bearer
+POST http://localhost:3002/customer/amusawi3@gmail.com
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsbXVhbGk2OTlAZ21haWwuY29tIiwiaWF0IjoxNjA5NDc3NTkxLCJleHAiOjE2MDk0Nzc2NTF9.Rkac5YZ0tMR1VcuMGeB98qJpwMe8rdAHzi3AHh7Qp3g
 Content-Type: application/json
 
 {
     "accountNumber": "1111222233334444",
-    "amount": 20
+    "amount": 100
 }
 
