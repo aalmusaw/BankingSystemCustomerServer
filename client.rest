@@ -5,3 +5,14 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsbXVhb
 
 ### get list of all merchants
 GET http://localhost:3002/merchant/
+
+### pay a bill
+POST http://localhost:3002/merchant/RBC%20Visa
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsbXVhbGk2OTlAZ21haWwuY29tIiwiaWF0IjoxNjA5NDc1NDc1LCJleHAiOjE2MDk0NzU1MzV9.ZoS8fBeMigorCxsUIAwrJxNZUCFku20jcTt-0NYkb6o
+Content-Type: application/json
+
+{
+    "accountNumber": "1111222233334444",
+    "amount": 20
+}
+
