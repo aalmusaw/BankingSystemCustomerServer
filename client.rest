@@ -1,7 +1,7 @@
 ### get client almuali699@gmail.com
 
 GET http://localhost:3002/customer/almuali699@gmail.com
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsbXVhbGk2OTlAZ21haWwuY29tIiwiaWF0IjoxNjA5NDU4MDEyLCJleHAiOjE2MDk0NTgwNzJ9.vPEGebE2m3BZ4J_M5ujznkCzNrcD6GoxS8AUoPygIiw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsbXVhbGk2OTlAZ21haWwuY29tIiwiaWF0IjoxNjA5NDU5ODA5LCJleHAiOjE2MDk0NTk4Njl9.sxywh8J_VQ2gJiYQ9A9xpZ-4VKbdObKpz4yv2eSJoz0
 
 ### get list of all merchants
 GET http://localhost:3002/merchant/

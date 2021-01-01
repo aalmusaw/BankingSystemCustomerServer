@@ -1,8 +1,9 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
-const authenticate = require('./middleware/authenticate');
 const customerRouter = require('./routes/customer');
+const merchantRouter = require('./routes/merchant');
+const authenticate = require('./middleware/authenticate');
 
 const DB_CONFIG = {
     useNewUrlParser: true,
@@ -20,6 +21,7 @@ mongoose.connect(process.env.DB_CONNECTION_URI, DB_CONFIG, err => {
 const app = express();
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
+app.use('/', merchantRouter);
 app.use('/', authenticate, customerRouter);
 
 
