@@ -16,3 +16,13 @@ Content-Type: application/json
     "amount": 20
 }
 
+### transfer
+POST http://localhost:3002/customer/aalmusaw@uwo.ca
+Authorization: Bearer
+Content-Type: application/json
+
+{
+    "accountNumber": "1111222233334444",
+    "amount": 20
+}
+
