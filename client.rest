@@ -26,3 +26,6 @@ Content-Type: application/json
     "amount": 100
 }
 
+### get transactions by month and year
+GET http://localhost:3002/customer/almuali699@gmail.com/account/1111222233334444/transactions?month=12&year=2020
+Authorization: Bearer 
