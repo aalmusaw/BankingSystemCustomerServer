@@ -1,4 +1,6 @@
 require('dotenv').config();
+
+const cors = require('cors');
 const express = require('express');
 const mongoose = require('mongoose');
 const customerRouter = require('./routes/customer');
@@ -19,6 +21,7 @@ mongoose.connect(process.env.DB_CONNECTION_URI, DB_CONFIG, err => {
 });
 
 const app = express();
+app.use(cors());
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use('/', authenticate, customerRouter);
