@@ -50,7 +50,9 @@ module.exports.payBill = function(req, res) {
                         const transaction = {amount: -1*amount, detail: detail};
                         account.transactions.push(transaction);
                         doc.save();
-                        res.sendStatus(201);
+                        res.status(201).json({
+                            message: "Bill payment made successfully."
+                        });
                     }
                 }
             });
