@@ -1,22 +1,28 @@
-### get client almuali699@gmail.com
-
+### get all data related to banking customer identified by almuali699@gmail.com
+### pass the access token received upon login/token refreshing
 GET http://localhost:3002/customer/almuali699@gmail.com
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsbXVhbGk2OTlAZ21haWwuY29tIiwiaWF0IjoxNjA5NDU5ODA5LCJleHAiOjE2MDk0NTk4Njl9.sxywh8J_VQ2gJiYQ9A9xpZ-4VKbdObKpz4yv2eSJoz0
 
-### get list of all merchants
+### get list of all merchants registered in the database
+### pass the access token received upon login/token refreshing
 GET http://localhost:3002/merchant/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsbXVhbGk2OTlAZ21haWwuY29tIiwiaWF0IjoxNjA5NjE4MTgxLCJleHAiOjE2MDk2MTgyNDF9.lb4jntB2pYu1M0QNCR4WKRSRHToCACmNEg2CktJa7LI
 
-### pay a bill
+### pay a bill to one of the registered merchants
+### pass the access token received upon login/token refreshing
+### pass the account number of the logged in user and the amount to pay in JSON format
 POST http://localhost:3002/merchant/RBC%20Visa
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsbXVhbGk2OTlAZ21haWwuY29tIiwiaWF0IjoxNjA5NDc1NDc1LCJleHAiOjE2MDk0NzU1MzV9.ZoS8fBeMigorCxsUIAwrJxNZUCFku20jcTt-0NYkb6o
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsbXVhbGk2OTlAZ21haWwuY29tIiwiaWF0IjoxNjA5NjIwODM4LCJleHAiOjE2MDk2MjA4OTh9.0vn-PUE2QSlOxURwLRJ7vj6tGCZGU5JhLRU8oZEWyls
 Content-Type: application/json
 
 {
     "accountNumber": "1111222233334444",
-    "amount": 20
+    "amount": 12.12
 }
 
-### transfer
+### transfer money to the customer with email address amusawi3@gmail.com
+### pass the access token received upon login/token refreshing
+### pass the account number of the logged in user and the amount to pay in JSON format
 POST http://localhost:3002/customer/amusawi3@gmail.com
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsbXVhbGk2OTlAZ21haWwuY29tIiwiaWF0IjoxNjA5NDc3NTkxLCJleHAiOjE2MDk0Nzc2NTF9.Rkac5YZ0tMR1VcuMGeB98qJpwMe8rdAHzi3AHh7Qp3g
 Content-Type: application/json
@@ -25,7 +31,3 @@ Content-Type: application/json
     "accountNumber": "1111222233334444",
     "amount": 100
 }
-
-### get transactions by month and year
-GET http://localhost:3002/customer/almuali699@gmail.com/account/1111222233334444/transactions?month=12&year=2020
-Authorization: Bearer 
